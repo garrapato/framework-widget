@@ -6,7 +6,8 @@ local storyboard = require( "storyboard" )
 local scene = storyboard.newScene()
 
 local USE_ANDROID_THEME = false
-local USE_IOS7_THEME = true
+local USE_IOS7_THEME = false
+local USE_YIUCODE_THEME = true
 local isGraphicsV1 = ( 1 == display.getDefault( "graphicsCompatibility" ) )
 
 --Forward reference for test function timer
@@ -33,7 +34,7 @@ function scene:createScene( event )
 		yAnchor = 0
 	end
 	
-	if USE_IOS7_THEME then
+	if USE_IOS7_THEME or USE_YIUCODE_THEME then
 		background = display.newRect( xAnchor, yAnchor, display.contentWidth, display.contentHeight )
 	else
 		background = display.newImage( "unitTestAssets/background.png" )
@@ -42,7 +43,7 @@ function scene:createScene( event )
 	
 	group:insert( background )
 	
-	if USE_IOS7_THEME then
+	if USE_IOS7_THEME or USE_YIUCODE_THEME then
 		-- create a white background, 40px tall, to mask / hide the scrollView
 		local topMask = display.newRect( 0, 0, display.contentWidth, 40 )
 		topMask:setFillColor( 235, 235, 235, 255 )
@@ -54,7 +55,7 @@ function scene:createScene( event )
 	local fontUsed = native.systemFont
 	
 	
-	if USE_IOS7_THEME then
+	if USE_IOS7_THEME or USE_YIUCODE_THEME then
 		backButtonPosition = 0
 		backButtonSize = 40
 		fontUsed = "HelveticaNeue-Light"
@@ -86,7 +87,7 @@ function scene:createScene( event )
 		--print( event.phase ) 
 	end
 		
-	if USE_IOS7_THEME then
+	if USE_IOS7_THEME or USE_YIUCODE_THEME then
 		-- create a gray background, 60px tall, to mask / hide the widget
 		local topMask = display.newRect( 0, 50, display.contentWidth, 60 )
 		topMask:setFillColor( 235, 235, 235, 255 )

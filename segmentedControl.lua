@@ -81,9 +81,9 @@ function scene:createScene( event )
 	-- Create a new segmented control object
 	local newSegmentedControl = widget.newSegmentedControl
 	{
-		left = 35,
+		left = 10,
 		top = 80,
-		segments = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" },
+		segments = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6" },
 		defaultSegment = 1,
 		--segmentWidth = 25,
 		--[[

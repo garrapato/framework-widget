@@ -7,6 +7,7 @@ local scene = storyboard.newScene()
 
 local USE_IOS_THEME = false
 local USE_IOS7_THEME = false
+local USE_YIUCODE_THEME = true
 local USE_ANDROID_THEME = false
 local USE_ANDROID_HOLO_LIGHT_THEME = false
 local USE_ANDROID_HOLO_DARK_THEME = false
@@ -39,6 +40,10 @@ function scene:createScene( event )
 	
 	if USE_IOS7_THEME then
 		widget.setTheme( "widget_theme_ios7" )
+	end
+
+	if USE_YIUCODE_THEME then
+		widget.setTheme( "widget_theme_yiucode" )
 	end
 
 	if USE_ANDROID_HOLO_LIGHT_THEME then
@@ -91,6 +96,11 @@ function scene:createScene( event )
 	group:insert( title )
 	
 	if USE_IOS7_THEME then
+		local separator = display.newRect( group, display.contentCenterX, title.contentHeight + title.y, display.contentWidth, 0.5 )
+		separator:setFillColor( unpack ( separatorColor ) )
+	end
+
+	if USE_YIUCODE_THEME then
 		local separator = display.newRect( group, display.contentCenterX, title.contentHeight + title.y, display.contentWidth, 0.5 )
 		separator:setFillColor( unpack ( separatorColor ) )
 	end

@@ -1,4 +1,4 @@
---[[
+require "CiderDebugger";--[[
 	Copyright:
 		Copyright (C) 2013 Corona Inc. All Rights Reserved.
 		

@@ -6,6 +6,7 @@ local storyboard = require( "storyboard" )
 local scene = storyboard.newScene()
 
 local USE_IOS7_THEME = false
+local USE_YIUCODE_THEME = false
 local isGraphicsV1 = ( 1 == display.getDefault( "graphicsCompatibility" ) )
 
 -- Forward reference for test function timer

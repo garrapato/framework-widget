@@ -9,6 +9,7 @@ local scene = storyboard.newScene()
 local testTimer = nil
 
 local USE_IOS7_THEME = false
+local USE_YIUCODE_THEME = false
 local isGraphicsV1 = ( 1 == display.getDefault( "graphicsCompatibility" ) )
 
 local tableSeparatorColor = { 0.86, 0.86, 0.86, 1 }
@@ -130,9 +131,9 @@ function scene:createScene( event )
 		end
 		
 		local rowTitle
-		if USE_IOS7_THEME and not row.isCategory then
+		if (USE_IOS7_THEME or USE_YIUCODE_THEME) and not row.isCategory then
 			rowTitle = display.newText( row, rowTitleText, 0, 0, "HelveticaNeue-Light", 17 )
-		elseif USE_IOS7_THEME and row.isCategory then
+		elseif (USE_IOS7_THEME or USE_YIUCODE_THEME) and row.isCategory then
 			rowTitle = display.newText( row, rowTitleText, 0, 0, "HelveticaNeue", 14 )
 		else
 			rowTitle = display.newText( row, rowTitleText, 0, 0, nil, 14 )
@@ -244,7 +245,7 @@ function scene:createScene( event )
 		local rowHeight = 40
 		local rowColor = nil
 		
-		if not USE_IOS7_THEME then
+		if not (USE_IOS7_THEME or USE_YIUCODE_THEME) then
 			--rowColor = { 
 			--	default = { 255, 255, 255 },
 			--	over = { 217, 217, 217 },
@@ -261,7 +262,7 @@ function scene:createScene( event )
 			rowHeight = 24
 			--rowHeight = 47
 			
-			if not USE_IOS7_THEME then
+			if not (USE_IOS7_THEME or USE_YIUCODE_THEME) then
 				--rowColor = 
 				--{ 
 				--	default = { 150, 160, 180, 200 },
