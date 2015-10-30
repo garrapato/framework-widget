@@ -1,13 +1,13 @@
 -----------------------------------------------------------------------------------------
--- theme_ios7.lua
+-- theme_yiucode.lua
 -----------------------------------------------------------------------------------------
 local modname = ...
 local theme = {}
 package.loaded[modname] = theme
 local imageSuffix = display.imageSuffix or ""
 
-local sheetFile = "widget_theme_ios7.png"
-local sheetData = "widget_theme_ios7_sheet"
+local sheetFile = "widget_theme_yiucode.png"
+local sheetData = "widget_theme_yiucode_sheet"
 
 -- Check for graphics V1 compatibility mode set
 local isGraphicsV1 = ( 1 == display.getDefault( "graphicsCompatibility" ) )
